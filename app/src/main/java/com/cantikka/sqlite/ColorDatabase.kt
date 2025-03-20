@@ -18,7 +18,7 @@ abstract class ColorDatabase: RoomDatabase() {
                 Room.databaseBuilder(
                     context.applicationContext,
                     ColorDatabase::class.java, "color_database"
-                ).setJournalMode(RoomDatabase.JournalMode.TRUNCATE)
+                ).setJournalMode(RoomDatabase.JournalMode.TRUNCATE) // Gunakan TRUNCATE untuk hanya menyimpan 1 file database
                     .build()
             }
         }

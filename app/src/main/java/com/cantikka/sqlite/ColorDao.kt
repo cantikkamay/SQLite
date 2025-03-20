@@ -8,9 +8,8 @@ import androidx.room.Update
 
 @Dao
 interface ColorDao {
-
-    @Query("SELECT * FROM color")
-    fun getAll(): Array<Color>
+    @Query("SELECT * FROM Color")
+    fun getAll(): List<Color>
 
     @Insert
     fun insert(vararg color: Color)
@@ -19,5 +18,5 @@ interface ColorDao {
     fun update(color: Color)
 
     @Delete
-    fun delete(color: Color)
+    fun delete(color:Color)
 }
